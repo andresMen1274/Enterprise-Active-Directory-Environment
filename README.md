@@ -1,6 +1,12 @@
 # Enterprise-active-directory-environment
 Enterprise Windows infrastructure environment using Active Directory, Group Policy, PowerShell, DNS, DHCP, Sysmon, and Wazuh to simulate identity management, Windows administration, authentication monitoring, security hardening, and administrative automation within a domain-based enterprise environment.
 
+## Security Hardening Decisions
+
+- Enforced password complexity and account lockout policies
+- Restricted unnecessary administrative privileges
+- Configured Windows Defender protections through GPO
+- Centralized authentication telemetry into Wazuh
 
 ## Configuration
 In this lab I will be creating an active directory lab. The lab will have two servers, a switch, router, kali Linux machine, and a windows 10 machine.
