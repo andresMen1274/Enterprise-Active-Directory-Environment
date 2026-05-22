@@ -49,7 +49,7 @@ When recieving the error prompt simply select enter and then let the server rebo
 
 <img width="932" height="852" alt="image" src="https://github.com/user-attachments/assets/d0fa8728-8a43-4b76-8ea4-67ffca674f3c" />
 
-# Active-Directory-Lab-Part-2
+## Splunk and Sysmon Configuration
 In this part of the active directory lab I will install and configure sysmon and splunk onto the windows target machine and windows server.
 
 First we want to configure a NAT network so all machines are able to connect to the internet. To do this first we want to navigate to tools, select network, and NAT networks. Select create and enter in a name for the network and enter the IP address of the network. Then for each of the virtual machines we are going to navigate to the network settings. then change the defalut NAT to the NAT network option that we just created. 
@@ -174,3 +174,13 @@ Use the login for the Windows server and the computer will be restarted. Now we 
 
 <img width="1016" height="855" alt="image" src="https://github.com/user-attachments/assets/bf2a1049-1976-4071-bc05-1d6f6a34d60d" />
 
+## Attack Simulation
+In this part of the lab I will be exploiting a system vulnerability and checking the logs that it creates in splunk. I will be performing a brute force attack that will expose the windows 10 machines and allow access.
+
+The fist thing we will do is turn on the Kali Linux virtual machine. Then we are going to open the terminal and make a directorty with mkdir <directory-name>. Then we will install crowbar with the command sudo apt-get install -y crowbar and type in the defalut Kali Linux password. Now we are going to get a list of common passwords from our newly downloaded crowbar software. To do this we will enter in the command cd /usr/share/wordlists/ 
+
+<img width="641" height="252" alt="image" src="https://github.com/user-attachments/assets/3ef90290-40f5-411e-830b-b4b45f2153a6" />
+
+Then we will unzip the rockyou.txt.gz with gunzip. The command is sudo gunzip rockyou.txt.gz and the output will be rockyou.txt. Moreover, we will copy the rockyou.txt file to our newly created directory using the command cp rockyou.txt ~/Desktop/ad/. Now we will cd into our newly created directory with the command cd ~/Desktop/ad. Then we will take the first 20 entries in the file and copy it over to password.txt with the command head -n 20 rockyou.txt > password.txt. 
+
+<img width="642" height="515" alt="image" src="https://github.com/user-attachments/assets/31e07e75-075f-4322-ae3f-feef11a6785a" />
