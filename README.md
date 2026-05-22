@@ -192,3 +192,6 @@ Then we will unzip the rockyou.txt.gz with gunzip. The command is sudo gunzip ro
 <img width="642" height="515" alt="image" src="https://github.com/user-attachments/assets/31e07e75-075f-4322-ae3f-feef11a6785a" />
 
 Now add the insecure password to the password.txt file. Then we will enable RDP on the Windows 10 endpoint mahine. To do this navigate to PC -> properties -> advanced settings -> remote -> Allow remote connections for these users and add the user on the Windows 10 endpoint machine. 
+
+
+
