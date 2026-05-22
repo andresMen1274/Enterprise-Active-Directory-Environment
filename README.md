@@ -190,3 +190,5 @@ The fist thing we will do is turn on the Kali Linux virtual machine. Then we are
 Then we will unzip the rockyou.txt.gz with gunzip. The command is sudo gunzip rockyou.txt.gz and the output will be rockyou.txt. Moreover, we will copy the rockyou.txt file to our newly created directory using the command cp rockyou.txt ~/Desktop/ad/. Now we will cd into our newly created directory with the command cd ~/Desktop/ad. Then we will take the first 20 entries in the file and copy it over to password.txt with the command head -n 20 rockyou.txt > password.txt. 
 
 <img width="642" height="515" alt="image" src="https://github.com/user-attachments/assets/31e07e75-075f-4322-ae3f-feef11a6785a" />
+
+Now add the insecure password to the password.txt file. Then we will enable RDP on the Windows 10 endpoint mahine. To do this navigate to PC -> properties -> advanced settings -> remote -> Allow remote connections for these users and add the user on the Windows 10 endpoint machine. 
