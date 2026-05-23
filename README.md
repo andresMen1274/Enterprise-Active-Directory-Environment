@@ -191,7 +191,8 @@ Then we will unzip the rockyou.txt.gz with gunzip. The command is sudo gunzip ro
 
 <img width="642" height="515" alt="image" src="https://github.com/user-attachments/assets/31e07e75-075f-4322-ae3f-feef11a6785a" />
 
-Now add the insecure password to the password.txt file. Then we will enable RDP on the Windows 10 endpoint mahine. To do this navigate to PC -> properties -> advanced settings -> remote -> Allow remote connections for these users and add the user on the Windows 10 endpoint machine. 
+Now add the insecure password to the password.txt file. Then we will enable RDP on the Windows 10 endpoint mahine. To do this navigate to PC -> properties -> advanced settings -> remote -> Allow remote connections for these users and add the user on the Windows 10 endpoint machine. Since Windows has a firewall we will have to disable the rule that drops ICMP packets and blocks port 53(DNS). This is done by entering command prompt as an administrator and entering the command ```netsh advfirewall set allprofiles state off```. In Kali Linux we have to change the nameserver. This is because the DNS server that is currently being used is google's DNS server 8.8.8.8. The google DNS server does not know of the existence of our LAN and the ACTIVEDIRECTORY.local domain that we have created. Therefore, we have to change the nameserver to the ip address of the Active Directory server. After that step has been done now we will use Hydra to brute force into the Windows 10 virtual machine. To do this enter this command as follows: 
+```hydra -l jsmith -P password.txt rdp://192.168.1.6 ```
 
-
+<img width="621" height="277" alt="image" src="https://github.com/user-attachments/assets/586c5fbf-3f5b-48d3-83ac-b089f414df26" />
 
