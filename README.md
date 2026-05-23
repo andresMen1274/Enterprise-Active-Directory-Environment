@@ -196,3 +196,4 @@ Now add the insecure password to the password.txt file. Then we will enable RDP 
 
 <img width="621" height="277" alt="image" src="https://github.com/user-attachments/assets/586c5fbf-3f5b-48d3-83ac-b089f414df26" />
 
+Make sure that the Splunk server is running while the brute force attack is occuring. 
