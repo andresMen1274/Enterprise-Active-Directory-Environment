@@ -250,4 +250,13 @@ This PowerShell automation script streamlines the deployment and management of a
 - Implements role-based group assignments
 - Uses idempotent logic to avoid duplicate object creation
 
+##Results of Script
+
+<img width="442" height="208" alt="image" src="https://github.com/user-attachments/assets/33ab9758-d436-4be8-bd5a-dcd8e477bbc1" />
+
+<img width="517" height="251" alt="image" src="https://github.com/user-attachments/assets/da2e0856-026c-4e1a-bef7-a76d51d6c547" />
+
+<img width="475" height="275" alt="image" src="https://github.com/user-attachments/assets/7e988ff8-2446-4ae3-9a96-30a4b0ccad7c" />
+
+<img width="401" height="455" alt="image" src="https://github.com/user-attachments/assets/39dba0b6-6558-41cd-95d6-294d35d678d4" />
 
