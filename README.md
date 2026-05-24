@@ -197,3 +197,57 @@ Now add the insecure password to the password.txt file. Then we will enable RDP 
 <img width="621" height="277" alt="image" src="https://github.com/user-attachments/assets/586c5fbf-3f5b-48d3-83ac-b089f414df26" />
 
 Make sure that the Splunk server is running while the brute force attack is occuring. 
+
+## Active Directory Automation
+This PowerShell automation script streamlines the deployment and management of an enterprise-style Active Directory environment by automatically provisioning Organizational Units (OUs), Security Groups, and domain users.
+
+<img width="941" height="623" alt="image" src="https://github.com/user-attachments/assets/35543b4b-1ca5-4425-8243-2259693ea10e" />
+
+### Features
+- Automatically creates Organizational Units (OUs)
+- Creates Global Security Groups for role-based access control (RBAC)
+- Provisions domain users with secure default passwords
+- Assigns users to department-specific OUs
+- Adds users to appropriate Security Groups
+- Prevents duplicate object creation through validation checks
+- Forces password change at first logon
+
+### Enterprise Concepts Demonstrated
+- Active Directory Administration
+- PowerShell Automation
+- Role-Based Access Control (RBAC)
+- Identity & Access Management (IAM)
+- User Provisioning Workflows
+- Infrastructure Automation
+- Security Group Management
+
+### Technologies Used
+- PowerShell
+- Active Directory Domain Services (AD DS)
+- Windows Server
+- RSAT ActiveDirectory Module
+
+### Example Workflow
+1. Create Organizational Units:
+   - IT
+   - SOC
+   - HR
+   - Security
+
+2. Create Security Groups:
+   - IT_admin
+   - SOC_admin
+   - HR_admin
+   - Security_admin
+
+3. Provision Users:
+   - Automatically creates users
+   - Places users into correct OUs
+   - Assigns users to corresponding Security Groups
+
+### Security Considerations
+- Uses SecureString for password handling
+- Implements role-based group assignments
+- Uses idempotent logic to avoid duplicate object creation
+
+
