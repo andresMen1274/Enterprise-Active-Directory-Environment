@@ -8,6 +8,33 @@ Enterprise Windows infrastructure environment using Active Directory, Group Poli
 - Configured Windows Defender protections through GPO
 - Centralized authentication telemetry into Wazuh
 
+## PowerShell Automation
+
+This lab includes a PowerShell automation script that provisions an enterprise-style Active Directory structure.
+
+The script automatically:
+- Creates Organizational Units: IT, SOC, HR, Security
+- Creates Global Security Groups for RBAC
+- Creates domain users
+- Places each user into the correct OU
+- Adds each user to the correct security group
+- Prevents duplicate object creation with validation checks
+
+## Automation Workflow Diagram
+
+<img width="941" height="623" alt="image" src="https://github.com/user-attachments/assets/35543b4b-1ca5-4425-8243-2259693ea10e" />
+
+## Skills Demonstrated
+
+- Active Directory Administration
+- PowerShell Automation
+- Identity and Access Management
+- Role-Based Access Control
+- Windows Server Administration
+- Security Group Management
+- Enterprise User Provisioning
+- Infrastructure Automation
+
 ## Configuration
 In this lab I will be creating an active directory lab. The lab will have two servers, a switch, router, kali Linux machine, and a windows 10 machine.
 
@@ -199,27 +226,6 @@ Now add the insecure password to the password.txt file. Then we will enable RDP 
 Make sure that the Splunk server is running while the brute force attack is occuring. 
 
 ## Active Directory Automation
-This PowerShell automation script streamlines the deployment and management of an enterprise-style Active Directory environment by automatically provisioning Organizational Units (OUs), Security Groups, and domain users.
-
-<img width="941" height="623" alt="image" src="https://github.com/user-attachments/assets/35543b4b-1ca5-4425-8243-2259693ea10e" />
-
-### Features
-- Automatically creates Organizational Units (OUs)
-- Creates Global Security Groups for role-based access control (RBAC)
-- Provisions domain users with secure default passwords
-- Assigns users to department-specific OUs
-- Adds users to appropriate Security Groups
-- Prevents duplicate object creation through validation checks
-- Forces password change at first logon
-
-### Enterprise Concepts Demonstrated
-- Active Directory Administration
-- PowerShell Automation
-- Role-Based Access Control (RBAC)
-- Identity & Access Management (IAM)
-- User Provisioning Workflows
-- Infrastructure Automation
-- Security Group Management
 
 ### Technologies Used
 - PowerShell
@@ -227,30 +233,13 @@ This PowerShell automation script streamlines the deployment and management of a
 - Windows Server
 - RSAT ActiveDirectory Module
 
-### Example Workflow
-1. Create Organizational Units:
-   - IT
-   - SOC
-   - HR
-   - Security
-
-2. Create Security Groups:
-   - IT_admin
-   - SOC_admin
-   - HR_admin
-   - Security_admin
-
-3. Provision Users:
-   - Automatically creates users
-   - Places users into correct OUs
-   - Assigns users to corresponding Security Groups
 
 ### Security Considerations
 - Uses SecureString for password handling
 - Implements role-based group assignments
 - Uses idempotent logic to avoid duplicate object creation
 
-##Results of Script
+## Results of Script
 
 <img width="442" height="208" alt="image" src="https://github.com/user-attachments/assets/33ab9758-d436-4be8-bd5a-dcd8e477bbc1" />
 
